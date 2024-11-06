@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import { NavLink } from "react-router-dom"
 
 const Items = ({Links, title}) => {
   return (
@@ -7,7 +7,9 @@ const Items = ({Links, title}) => {
       {
         Links.map(({name, content, link}) => (
           <li key={name}>
-            <a className='text-gray-400 hover:text-teal-400 duration-300 text-sm cursor-pointer leading-6' href={link}>{`${name}:  ${content}`}</a>
+            <NavLink to={link} className='text-gray-400 hover:text-teal-400 duration-300 text-sm cursor-pointer leading-6'>
+            {`${name}:  ${content}`}
+            </NavLink>
           </li>
         ))
       }

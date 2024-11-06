@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { WondersImages } from './SevenWondersimages/SevenWondersImages'
+import './SevenWondersCss/SevenWonders.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -15,24 +16,24 @@ const SevenWonders = () => {
         });
       }, []);
   return (
-    <div className='px-12 pt-32 text-center'>
+    <div className='sevenContainer' >
 
-        <h1 data-aos="fade-up" className='text-black font-bold 
-        text-3xl tracking-widest mb-6 md:mb-20'>The Seven Angola`s Wonders
+        <h1 className="sevenTitle">The Seven Wonders Of Angola
         </h1>
 
-        <ul  className='flex w-100 flex-col mb-12'>
-                {
-                    sevenWonders.map(({image,name,description}, index) =>(
-                        <li data-aos="slide-up" className='lg:flex md:block items-center gap-6 md:gap-8 justify-center my-8' key={index}>
-                            <img src={image} alt={`image of ${name}`} className='hover:scale-110 hover:brightness-75 transition-all duration-700 cursor-pointer mb-10 shadow-2xl lg:h-full lg:w-1/2'/>
-                            <div className='px-4'> 
-                              <p className='mb-5 text-start font-bold text-2xl'>{name}</p>
-                              <p className='text-start text-xl lg:pr-38'>{description}</p>
-                            </div>
-                        </li>
-                    ))
-                }
+        <ul  className='sevenCss sevenList  gap-8 mb-12'>
+            {
+              sevenWonders.map(({image,name,/*description*/}, index) =>(
+                <li  className='sevenItems' key={index}>
+                    <img src={image} alt={`image of ${name}`} className='sevenImg'/>
+                    <div className='absolute text-white bg-black opacity-70 rounded-lg  
+                    px-4 top-3/4'> 
+                      <p className='p-2 text-center font-bold text-xl'>{name}</p>
+                      {/* <p className='text-start text-xl lg:pr-38'>{description}</p> */}
+                    </div>
+                </li>
+              ))
+            }
         </ul>
 
     </div>

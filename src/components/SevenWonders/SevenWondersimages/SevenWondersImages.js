@@ -33,7 +33,7 @@ export const WondersImages = [
       },
       
       {
-        "image":"https://www.airjet.ao/wp-content/uploads/2022/11/ba34b53af72aaeeebe70.png",
+        "image":"https://www.hoteisangola.com/media/images/dirlistings/GRUTASDONZENZO-UIGE.jpg",
         "name":"Grutas do Zenzo, Uige",
         "description":`The Zenzo Caves, a captivating natural wonder in Angola, offer an enchanting underground adventure. Located in the Uíge province, these caves are a marvel of geological formations, featuring stunning stalactites and stalagmites that have formed over millennia. The cool, mysterious depths of the caves provide a stark contrast to the lush, vibrant landscapes above ground. Visitors are drawn to the Zenzo Caves for their unique beauty and the sense of discovery they evoke. Exploring these caverns is a journey into the heart of the earth, revealing intricate rock formations and hidden chambers. The caves are not only a geological treasure but also a historical one, with ancient carvings and artifacts hinting at past civilizations. A visit to the Zenzo Caves is a mesmerizing experience, offering a blend of natural beauty and historical intrigue that captivates the imagination and spirit of adventure.`
       },

@@ -1,0 +1,177 @@
+.navBar{
+    background: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 99999;
+    position: relative;
+    padding: 0 1rem;
+
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+.navOptions{
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+}
+.angContainer{
+    gap: 4px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.angFlag{
+    width: 3rem;
+    height: 2rem;
+}
+.menuIcon{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+   
+}
+
+/* CONTANER OPTION */
+
+.navOptionsContainer{
+    display: flex;
+    align-items: center;
+    position: static;
+    left: 0;
+    width: auto;
+}
+.optionItems{
+    padding: 18px;
+    transition: all 0.7s ease;
+}
+.optionItems:hover{
+    color: white;
+    background: black;
+}
+.moreOptions{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.moreOptinsClicked{
+    background-color: #f1f5f9;
+    position: absolute;
+    height: fit-content;
+    width: 16rem;
+    right: 20px;
+    padding: 8px;
+
+    
+}
+.moreOptinsNotClicked{
+    display: none;
+}
+.moreOptinsClickedItems{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+}
+@media screen and (max-width: 800px) {
+    .navBar{
+        padding: 1rem;
+        height: 4rem;
+    }
+    .angContainer{
+        gap: 4px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .menuIcon{
+        display: flex;
+        right: 4rem;
+        top: 1rem;
+    }
+    .navOptionsContainer{
+        display: none;
+    }
+
+    
+    @keyframes sideSlide {
+        from {
+            transform: translateX(-100%); /* Começa fora da tela, à esquerda */
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0); /* Entra na tela */
+            opacity: 1;
+        }
+    }
+    /* .nav__menu li:nth-child(2){
+        animation-delay: 300ms;
+    }
+    .nav__menu li:nth-child(3){
+        animation-delay: 600ms;
+    }
+    .nav__menu li:nth-child(4){
+        animation-delay: 900ms;
+    } */
+   
+}
+
+
+/* SAMLL SCREEN  */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: flex-start; /* Alinha o sideBar à esquerda */
+    z-index: 9999;
+}
+.smallNavBarClicked{
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    height:100vh;
+    background: white;
+    width: 68%;
+
+
+    animation: sideSlide 0.3s forwards ease-in-out;
+}
+.smallNavBarNotClicked{
+    display: none;
+}
+.smallList{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    display: flex;
+    padding: 8px 4rem;
+    justify-content: start;
+    
+
+}
+.smallItems{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

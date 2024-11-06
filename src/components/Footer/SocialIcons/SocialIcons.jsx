@@ -1,12 +1,9 @@
-import React from 'react'
-
 const SocialIcons = ({icons}) => {
   return (
-    <div className='text-teal-500 mt-6'>
+    <div className='socialIconContaier'>
      {
          icons.map(({name,link})=>(
-            <span key={name} className='p-2 cursor-pointer inline-flex items-center rounded-full bg-gray-700 mx-1.5
-            text-xl hover:text-gray-100 hover:bg-teal-500 duration-300'>
+            <span key={name} className='socialIconContent'>
                  <a href={link}><ion-icon name={name}></ion-icon></a>
             </span>
         ))
